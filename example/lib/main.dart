@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'dart:async';
 
-import 'package:flutter/services.dart';
 import 'package:edit_exif/edit_exif.dart';
 
 void main() => runApp(MyApp());
@@ -12,15 +10,16 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  String _platformVersion = 'Unknown';
+  //String _platformVersion = 'Unknown';
 
   @override
   void initState() {
     super.initState();
-    initPlatformState();
+    //initPlatformState();
   }
 
   // Platform messages are asynchronous, so we initialize in an async method.
+  /*
   Future<void> initPlatformState() async {
     String platformVersion;
     // Platform messages may fail, so we use a try/catch PlatformException.
@@ -39,6 +38,7 @@ class _MyAppState extends State<MyApp> {
       _platformVersion = platformVersion;
     });
   }
+  */
 
   @override
   Widget build(BuildContext context) {
@@ -48,7 +48,7 @@ class _MyAppState extends State<MyApp> {
           title: const Text('Plugin example app'),
         ),
         body: Center(
-          child: RaisedButton(
+          child: ElevatedButton(
             onPressed: () async {
               await getExif();
             },
@@ -62,7 +62,7 @@ class _MyAppState extends State<MyApp> {
   getExif() async {
     String path = 'your image path';
     var exif = FlutterExif(path);
-    String exifData = await exif.getExif('');
+    String? exifData = await exif.getExif('');
     print(exifData);
   }
 }

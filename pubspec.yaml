@@ -1,11 +1,10 @@
 name: edit_exif
 description: A new flutter plugin can edit image(jpeg) exif.
 version: 1.0.0
-author: caipeng<caipenghsxr@gmail.com>
 homepage: https://github.com/caipeng-hrv/edit_exif
 
 environment:
-  sdk: ">=2.1.0 <3.0.0"
+  sdk: ">=2.12.0 <3.0.0"
 
 dependencies:
   flutter:
