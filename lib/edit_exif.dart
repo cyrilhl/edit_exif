@@ -51,7 +51,8 @@ class FlutterExif {
           'Latitude': location['lat'],
           'LatitudeRef': location['lat'] > 0 ? 'N' : 'S',
           'Longitude': location['lng'],
-          'LongitudeRef': location['lng'] > 0 ? 'E' : 'W'
+          'LongitudeRef': location['lng'] > 0 ? 'E' : 'W',
+          'ImgDirection': location['img_dir'],
         }
       });
     } else {
