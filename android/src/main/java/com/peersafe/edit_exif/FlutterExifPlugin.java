@@ -15,7 +15,7 @@ import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugin.common.MethodChannel;
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler;
 import io.flutter.plugin.common.MethodChannel.Result;
-import io.flutter.plugin.common.PluginRegistry.Registrar;
+//import io.flutter.plugin.common.PluginRegistry.Registrar;
 
 /** FlutterExifPlugin */
 public class FlutterExifPlugin implements FlutterPlugin, MethodCallHandler  {
@@ -35,11 +35,13 @@ public class FlutterExifPlugin implements FlutterPlugin, MethodCallHandler  {
     channel.setMethodCallHandler(null);
   }
 
+  /*
   public static void registerWith(Registrar registrar) {
     final MethodChannel channel = new MethodChannel(registrar.messenger(), "edit_exif");
     final FlutterExifPlugin plugin = new FlutterExifPlugin();
     channel.setMethodCallHandler(plugin);
   }
+   */
 
   @Override
   public void onMethodCall(MethodCall call, Result result) {
